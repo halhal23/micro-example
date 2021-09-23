@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Top } from "./pages";
+import { Top } from "./container/pages";
 
 const Path = {
   top: "/",
