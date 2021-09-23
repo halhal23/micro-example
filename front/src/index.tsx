@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { DefaultLayout } from "./container/templates";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Router from "./Router";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <DefaultLayout>
+      <Router />
+    </DefaultLayout>
   </React.StrictMode>,
   document.getElementById("root")
 );
