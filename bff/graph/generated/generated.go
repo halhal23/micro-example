@@ -226,6 +226,9 @@ func (ec *executionContext) introspectType(name string) (*introspection.Type, er
 }
 
 var sources = []*ast.Source{
+	{Name: "graph/schema/schema.graphqls", Input: `type Query
+
+type Mutation`, BuiltIn: false},
 	{Name: "graph/schema/user.graphqls", Input: `type User {
   id: Int!
   name: String!

@@ -7,7 +7,6 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/halhal23/micro-example/bff/graph/generated"
 	"github.com/halhal23/micro-example/bff/graph/model"
 )
 
@@ -30,12 +29,3 @@ func (r *queryResolver) User(ctx context.Context, input int) (*model.User, error
 func (r *queryResolver) Users(ctx context.Context) ([]*model.User, error) {
 	panic(fmt.Errorf("not implemented"))
 }
-
-// Mutation returns generated.MutationResolver implementation.
-func (r *Resolver) Mutation() generated.MutationResolver { return &mutationResolver{r} }
-
-// Query returns generated.QueryResolver implementation.
-func (r *Resolver) Query() generated.QueryResolver { return &queryResolver{r} }
-
-type mutationResolver struct{ *Resolver }
-type queryResolver struct{ *Resolver }
