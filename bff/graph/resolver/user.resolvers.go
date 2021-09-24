@@ -23,7 +23,11 @@ func (r *mutationResolver) DeleteUser(ctx context.Context, input int) (int, erro
 }
 
 func (r *queryResolver) User(ctx context.Context, input int) (*model.User, error) {
-	panic(fmt.Errorf("not implemented"))
+	return &model.User{
+		ID: 11,
+		Name: "hiro",
+		Email: "haru@exam.com",
+	}, nil 
 }
 
 func (r *queryResolver) Users(ctx context.Context) ([]*model.User, error) {
